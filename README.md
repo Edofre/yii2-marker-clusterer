@@ -92,7 +92,7 @@ Make sure to add the google maps key to your assetManager
 	'bundles' => [
 		'dosamigos\google\maps\MapAsset' => [
 			'options' => [
-				'key'      => 'AIzaSyBPTzcjBwXfo3xnVjtJsblozv2dYsKCIBI',
+				'key'      => 'XYZ',
 				'language' => 'nl',
 				'version'  => '3.1.18',
 			],
