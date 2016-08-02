@@ -50,6 +50,8 @@ class Map extends \dosamigos\google\maps\Map
 		$js[] = "container.style.height = '{$height}';";
 		$js[] = "var {$this->getName()} = new google.maps.Map(container, mapOptions);";
 		$js = ArrayHelper::merge($js, $overlaysJs);
+		// Make object available globally
+		$js[] = "window.globalmap = {$this->getName()};";
 		foreach ($this->events as $event) {
 			/** @var Event $event */
 			$js[] = $event->getJs($name);
