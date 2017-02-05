@@ -1,5 +1,11 @@
 # Yii2 marker-clusterer widget
 
+[![Latest Stable Version](https://poser.pugx.org/edofre/yii2-marker-clusterer/v/stable)](https://packagist.org/packages/edofre/yii2-marker-clusterer)
+[![Total Downloads](https://poser.pugx.org/edofre/yii2-marker-clusterer/downloads)](https://packagist.org/packages/edofre/yii2-marker-clusterer)
+[![Latest Unstable Version](https://poser.pugx.org/edofre/yii2-marker-clusterer/v/unstable)](https://packagist.org/packages/edofre/yii2-marker-clusterer)
+[![License](https://poser.pugx.org/edofre/yii2-marker-clusterer/license)](https://packagist.org/packages/edofre/yii2-marker-clusterer)
+[![composer.lock](https://poser.pugx.org/edofre/yii2-marker-clusterer/composerlock)](https://packagist.org/packages/edofre/yii2-marker-clusterer)
+
 ## Installation
 
 The preferred way to install this extension is through [composer](http://getcomposer.org/download/).
