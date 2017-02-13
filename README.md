@@ -13,13 +13,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 To install, either run
 
 ```
-$ php composer.phar require edofre/yii2-marker-clusterer "*"
+$ php composer.phar require edofre/yii2-marker-clusterer
 ```
 
 or add
 
 ```
-"edofre/yii2-marker-clusterer": "*"
+"edofre/yii2-marker-clusterer": "v1.0.1"
 ```
 
 to the ```require``` section of your `composer.json` file.
