@@ -3,6 +3,7 @@ namespace edofre\markerclusterer;
 
 use dosamigos\google\maps\ObjectAbstract;
 use yii\helpers\ArrayHelper;
+use yii\helpers\Json;
 use yii\web\JsExpression;
 
 /**
@@ -11,6 +12,11 @@ use yii\web\JsExpression;
  */
 class Map extends \dosamigos\google\maps\Map
 {
+	/**
+	 * @var array the JS options for the MarkerClusterer object
+	 */
+	public $clusterOptions = [];
+
 	/**
 	 * @var array stores javascript code that is going to be rendered together with script initialization
 	 */
@@ -68,10 +74,15 @@ class Map extends \dosamigos\google\maps\Map
 		// Register the ClustererAsset
 		$view = \Yii::$app->getView();
 		$cluster_asset_manager = ClustererAsset::register($view);
+
+		$this->clusterOptions = ArrayHelper::merge([
+			'imagePath' => $cluster_asset_manager->imagePath,
+		], $this->clusterOptions);
+
+		$jsonClusterOptions = Json::encode($this->clusterOptions);
+
 		// Create the MarkerClusterer object and add the markers
-		$js[] = "var markerCluster = new MarkerClusterer({$name}, markers, {
-			imagePath: '{$cluster_asset_manager->imagePath}'
-		});";
+		$js[] = "var markerCluster = new MarkerClusterer({$name}, markers, $jsonClusterOptions);";
 
 		$js[] = "};";
 		$js[] = "google.maps.event.addDomListener(window, 'load', initialize);";
